@@ -4,6 +4,8 @@
 
 Wait until cb doesn't throw or time out.
 
+Install [`@skidding/async-retry`](https://www.npmjs.com/package/@skidding/async-retry).
+
 ### Why not [zeit/async-retry](https://github.com/zeit/async-retry)?
 
 I use this package for testing async behavior where running times are sensitive. What's different here?
