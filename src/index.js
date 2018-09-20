@@ -1,8 +1,8 @@
 import until from 'async-until';
 
 export default async function retry(fn, opts = {}) {
-  const { timeout = 1000 } = opts;
-  const untilOpts = { ...opts, timeout };
+  const { timeout = 1000, loopDelay = 50 } = opts;
+  const untilOpts = { ...opts, timeout, loopDelay };
 
   try {
     await until(() => {

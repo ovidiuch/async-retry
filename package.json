@@ -1,6 +1,6 @@
 {
   "name": "@skidding/async-retry",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Wait until cb doesn't throw or time out",
   "repository": "https://github.com/skidding/async-retry.git",
   "author": "Ovidiu Cherecheș <hello@ovidiu.ch>",
