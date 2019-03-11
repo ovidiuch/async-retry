@@ -1,12 +1,15 @@
 {
   "name": "@skidding/async-retry",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Wait until cb doesn't throw or time out",
   "repository": "https://github.com/skidding/async-retry.git",
   "author": "Ovidiu Cherecheș <hello@ovidiu.ch>",
   "license": "MIT",
   "main": "dist/index.js",
-  "files": ["dist"],
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
   "scripts": {
     "lint": "eslint '**/*.js' --quiet",
     "test": "jest",
