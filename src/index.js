@@ -5,9 +5,9 @@ export default async function retry(fn, opts = {}) {
   const untilOpts = { ...opts, timeout, loopDelay };
 
   try {
-    await until(() => {
+    await until(async () => {
       try {
-        fn();
+        await fn();
         return true;
       } catch (err) {
         return false;
