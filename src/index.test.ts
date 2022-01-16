@@ -1,5 +1,3 @@
-/* eslint-env jest */
-
 import retry from './';
 
 it('fails if callback always crashes', async () => {
