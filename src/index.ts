@@ -1,13 +1,18 @@
 import until from 'async-until';
 
-export default async function retry(fn, opts = {}) {
+export type RetryOpts = {
+  timeout?: number;
+  loopDelay?: number;
+};
+
+export default async function retry(cb: () => unknown, opts: RetryOpts = {}) {
   const { timeout = 1000, loopDelay = 50 } = opts;
   const untilOpts = { ...opts, timeout, loopDelay };
 
   try {
     await until(async () => {
       try {
-        await fn();
+        await cb();
         return true;
       } catch (err) {
         return false;
@@ -16,6 +21,6 @@ export default async function retry(fn, opts = {}) {
   } catch (err) {
     // At this point we know the condition failed, but we want to let the
     // original exception bubble up
-    fn();
+    cb();
   }
 }
