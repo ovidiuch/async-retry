@@ -1,4 +1,4 @@
-import retry from './';
+import retry from './index';
 
 it('fails if callback always crashes', async () => {
   const err = new Error('Boom');
