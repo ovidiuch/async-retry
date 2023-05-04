@@ -1,6 +1,6 @@
 {
   "name": "@skidding/async-retry",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Wait until cb doesn't throw or time out",
   "repository": "https://github.com/skidding/async-retry.git",
   "author": "Ovidiu Cherecheș <hello@ovidiu.ch>",
@@ -18,13 +18,13 @@
     "build": "rm -rf dist && yarn tsc -b tsconfig.build.json"
   },
   "dependencies": {
-    "async-until": "^3.0.0"
+    "async-until": "^4.0.1"
   },
   "devDependencies": {
-    "@types/jest": "^27.4.0",
-    "jest": "^27.4.7",
-    "prettier": "^2.5.1",
-    "ts-jest": "^27.1.3",
-    "typescript": "^4.5.4"
+    "@types/jest": "^29.5.1",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.8",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.4"
   }
 }
