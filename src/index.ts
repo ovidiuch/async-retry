@@ -21,6 +21,6 @@ export default async function retry(cb: () => unknown, opts: RetryOpts = {}) {
   } catch (err) {
     // At this point we know the condition failed, but we want to let the
     // original exception bubble up
-    cb();
+    await cb();
   }
 }
